@@ -73,4 +73,3 @@ li = soup.find("li")
 li = soup.find("li")
 
 res = li.find_parent().find_previous_sibling()["id"]
-print(res)
