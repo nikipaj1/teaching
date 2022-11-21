@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charse="UTF-8">
+    <meta name="viewport" content="widht=device-width" initial-scale="1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo</title>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <h1>Straipsniai:</h1>
+    <!-- {{ data }} -->
+    {% for straipsnis in data %}
+    {% if straipsnis['status'] == 'published' %}
+    <h3>{{ straipsnis['pavadinimas'] }}</h3>
+    <p>{{ straipsnis['data'] }}, {{ straipsnis['autorius'] }}</p>
+    <hr>
+    <p>{{ straipsnis['tekstas'] }}</p>
+    <br><br>
+    {%else%}
+    <h3>{{ straipsnis['pavadinimas'] }} - <i>publikavimas laikinai išjungtas</i></h3>
+    <br><br>
+    {% endif %}
+    {% endfor %}
+    
+    
+</body> 
+
+
+
+
+
+</html>
