@@ -57,9 +57,14 @@ def finally_pavyzdys():
     
 
 def use_exception_in_input():
+    integer1 = None
+    integer2 = None
     while True:
         try:
-            x= int(input("Iveskite skaiciu: "))
+            if not integer1:
+                integer1 = int(input("Iveskite skaiciu #1: "))
+            if not integer2:
+                integer2 = int(input("Iveskite skaiciu #2: "))
             break
         except ValueError:
             print("Ivedete ne skaiciu. Bandykite dar karta.")
