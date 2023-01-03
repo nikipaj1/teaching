@@ -1,5 +1,9 @@
 #!/Users/nikitapajanok/Development/Teaching/teaching/kartojimas/env/bin/python
 from pymysql.err import MySQLError
+import os
+
+print(os.getcwd())
+
 
 def dalyba_is_nulio():
     dalinys = 7
